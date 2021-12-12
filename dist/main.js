@@ -2,7 +2,7 @@ import 'style.css'
 
 import * as THREE from 'https://cdn.skypack.dev/pin/three@v0.135.0-pjGUcRG9Xt70OdXl97VF/mode=imports,min/optimized/three.js';
 
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+// import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 const scene = new THREE.Scene();
 
@@ -32,7 +32,7 @@ const lightHelper = new THREE.PointLightHelper(pointLight)
 const gridHelper = new THREE.GridHelper(200, 50);
 scene.add(lightHelper, gridHelper)
 
-const controls = new OrbitControls(camera, renderer.domElement);
+// const controls = new OrbitControls(camera, renderer.domElement);
 
 const random_hex_color_code = () => {
   let n = (Math.random() * 0xfffff * 1000000).toString(16);
@@ -60,7 +60,7 @@ function animate() {
   torus.rotation.x += 0.01;
   torus.rotation.y += 0.005;
 
-  controls.update();
+  // controls.update();
 
   renderer.render( scene, camera );
 }
